@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MeG-1y-K8z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--紙牌碰碰樂-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="CL7-gH-ewa">
+                                <rect key="frame" x="67" y="123" width="280" height="55"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Efn-b8-Cab">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="步數：0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tku-8X-IPz">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="總分：0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGL-Dy-JDb">
+                                                <rect key="frame" x="0.0" y="30" width="100" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Efn-b8-Cab" secondAttribute="height" multiplier="20:11" id="1Vt-Z1-Wfi"/>
+                                            <constraint firstAttribute="width" constant="100" id="JIp-3F-THF"/>
+                                            <constraint firstAttribute="height" constant="55" id="Szg-OK-pJ6"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="倒數 : 30.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ws-GF-HaX">
+                                        <rect key="frame" x="160" y="0.0" width="120" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <color key="textColor" systemColor="systemBlueColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CL7-gH-ewa" secondAttribute="height" multiplier="56:11" id="VJ9-eU-zKv"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="P0p-Vc-hSv">
+                                <rect key="frame" x="67" y="203" width="280" height="480"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hqk-lu-vBD">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="109.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2s-0f-pVJ" customClass="CardView" customModule="CardGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="109.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-bn-tQs">
+                                                        <rect key="frame" x="7" y="39" width="69" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Icb-bn-tQs" firstAttribute="centerY" secondItem="G2s-0f-pVJ" secondAttribute="centerY" id="5oQ-FH-OOy"/>
+                                                    <constraint firstAttribute="width" secondItem="G2s-0f-pVJ" secondAttribute="height" multiplier="83:109" id="BW3-dZ-Kor"/>
+                                                    <constraint firstItem="Icb-bn-tQs" firstAttribute="centerX" secondItem="G2s-0f-pVJ" secondAttribute="centerX" id="sY5-KN-4Ls"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="CardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbA-Fj-MYr"/>
+                                                    <action selector="Click:" destination="2xr-Jz-qyB" eventType="touchUpInside" id="QNa-Aw-MrP"/>
+                                                </connections>
+                                            </view>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0f-If-AmM" customClass="CardView" customModule="CardGame" customModuleProvider="target">
+                                                <rect key="frame" x="98.5" y="0.0" width="83" height="109.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3La-ze-4dy">
+                                                        <rect key="frame" x="8.5" y="39.5" width="66.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="3La-ze-4dy" firstAttribute="centerX" secondItem="a0f-If-AmM" secondAttribute="centerX" id="bPW-Zy-KTV"/>
+                                                    <constraint firstItem="3La-ze-4dy" firstAttribute="centerY" secondItem="a0f-If-AmM" secondAttribute="centerY" id="nIc-3U-baD"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="CardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p17-3n-6eQ"/>
+                                                </connections>
+                                            </view>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMd-LF-h5s" customClass="CardView" customModule="CardGame" customModuleProvider="target">
+                                                <rect key="frame" x="196.5" y="0.0" width="83.5" height="109.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMN-FS-fXm">
+                                                        <rect key="frame" x="8.5" y="39.5" width="66.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="nMN-FS-fXm" firstAttribute="centerX" secondItem="ZMd-LF-h5s" secondAttribute="centerX" id="hjZ-Uw-opF"/>
+                                                    <constraint firstItem="nMN-FS-fXm" firstAttribute="centerY" secondItem="ZMd-LF-h5s" secondAttribute="centerY" id="mVL-u8-GiS"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="CardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jcz-52-nJc"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="a0f-If-AmM" firstAttribute="leading" secondItem="G2s-0f-pVJ" secondAttribute="trailing" constant="15" id="OQg-g6-me8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qaE-Uc-owg">
+                                        <rect key="frame" x="0.0" y="124.5" width="280" height="109.5"/>
+                                        <subviews>
+                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZX-pH-gdw" customClass="CardView" customModule="CardGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="109.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpJ-by-6go">
+                                                        <rect key="frame" x="8.5" y="39.5" width="66.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="CpJ-by-6go" firstAttribute="centerY" secondItem="DZX-pH-gdw" secondAttribute="centerY" id="HLc-9Z-qbD"/>
+                                                    <constraint firstAttribute="width" secondItem="DZX-pH-gdw" secondAttribute="height" multiplier="83:109" id="OV9-Os-IRo"/>
+                                                    <constraint firstItem="CpJ-by-6go" firstAttribute="centerX" secondItem="DZX-pH-gdw" secondAttribute="centerX" id="RmT-aj-hIo"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="CardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yi1-gP-YQD"/>
+                                                </connections>
+                                            </view>
+                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fal-Hv-wvK" customClass="CardView" customModule="CardGame" customModuleProvider="target">
+                                                <rect key="frame" x="98.5" y="0.0" width="83" height="109.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6C-km-r6L">
+                                                        <rect key="frame" x="8.5" y="39.5" width="66.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="r6C-km-r6L" firstAttribute="centerX" secondItem="fal-Hv-wvK" secondAttribute="centerX" id="XfR-er-7CM"/>
+                                                    <constraint firstItem="r6C-km-r6L" firstAttribute="centerY" secondItem="fal-Hv-wvK" secondAttribute="centerY" id="slN-y4-sML"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="CardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CT3-ag-etQ"/>
+                                                </connections>
+                                            </view>
+                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNF-5c-H9E" customClass="CardView" customModule="CardGame" customModuleProvider="target">
+                                                <rect key="frame" x="196.5" y="0.0" width="83.5" height="109.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQs-GE-aSy">
+                                                        <rect key="frame" x="8.5" y="39.5" width="66.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="dQs-GE-aSy" firstAttribute="centerX" secondItem="cNF-5c-H9E" secondAttribute="centerX" id="Pfq-pr-xn0"/>
+                                                    <constraint firstItem="dQs-GE-aSy" firstAttribute="centerY" secondItem="cNF-5c-H9E" secondAttribute="centerY" id="Rup-lD-Fx4"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="CardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DlD-AS-iCl"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fal-Hv-wvK" firstAttribute="leading" secondItem="DZX-pH-gdw" secondAttribute="trailing" constant="15" id="JCA-oI-j8F"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nE7-u1-TBL">
+                                        <rect key="frame" x="0.0" y="249" width="280" height="109"/>
+                                        <subviews>
+                                            <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gG6-1O-u6b" customClass="CardView" customModule="CardGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="109"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chD-fd-elE">
+                                                        <rect key="frame" x="8.5" y="39.5" width="66.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="chD-fd-elE" firstAttribute="centerX" secondItem="gG6-1O-u6b" secondAttribute="centerX" id="3UY-c1-N0q"/>
+                                                    <constraint firstAttribute="width" secondItem="gG6-1O-u6b" secondAttribute="height" multiplier="83:109" id="Ta7-TV-Yez"/>
+                                                    <constraint firstItem="chD-fd-elE" firstAttribute="centerY" secondItem="gG6-1O-u6b" secondAttribute="centerY" id="amT-Ul-qLe"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="CardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDb-Qh-9Qu"/>
+                                                </connections>
+                                            </view>
+                                            <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9c-wy-ETf" customClass="CardView" customModule="CardGame" customModuleProvider="target">
+                                                <rect key="frame" x="98.5" y="0.0" width="83" height="109"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kow-Na-FCO">
+                                                        <rect key="frame" x="8.5" y="39.5" width="66.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Kow-Na-FCO" firstAttribute="centerX" secondItem="L9c-wy-ETf" secondAttribute="centerX" id="c2S-sb-LES"/>
+                                                    <constraint firstItem="Kow-Na-FCO" firstAttribute="centerY" secondItem="L9c-wy-ETf" secondAttribute="centerY" id="jf8-OU-rov"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="CardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1NN-Mp-Qfn"/>
+                                                </connections>
+                                            </view>
+                                            <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bY-QT-k1c" customClass="CardView" customModule="CardGame" customModuleProvider="target">
+                                                <rect key="frame" x="196.5" y="0.0" width="83.5" height="109"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8N-HD-lNL">
+                                                        <rect key="frame" x="8.5" y="39.5" width="66.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="u8N-HD-lNL" firstAttribute="centerY" secondItem="8bY-QT-k1c" secondAttribute="centerY" id="HJ0-89-TFT"/>
+                                                    <constraint firstItem="u8N-HD-lNL" firstAttribute="centerX" secondItem="8bY-QT-k1c" secondAttribute="centerX" id="m2L-Kx-vIs"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="CardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZHe-hG-O4m"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="L9c-wy-ETf" firstAttribute="leading" secondItem="gG6-1O-u6b" secondAttribute="trailing" constant="15" id="El7-qN-XWg"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="y5j-mT-cr2">
+                                        <rect key="frame" x="98.5" y="373" width="83" height="107"/>
+                                        <subviews>
+                                            <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbZ-HP-BlU" customClass="CardView" customModule="CardGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="107"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ9-zn-vVe">
+                                                        <rect key="frame" x="8.5" y="38.5" width="66.5" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="pI9-HR-D32"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="HQ9-zn-vVe" firstAttribute="centerY" secondItem="jbZ-HP-BlU" secondAttribute="centerY" id="fsW-bB-k4G"/>
+                                                    <constraint firstItem="HQ9-zn-vVe" firstAttribute="centerX" secondItem="jbZ-HP-BlU" secondAttribute="centerX" id="pZ5-FK-kpi"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="CardClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VwW-Vr-74r"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="y5j-mT-cr2" firstAttribute="leading" secondItem="L9c-wy-ETf" secondAttribute="leading" id="6BM-dV-3vD"/>
+                                    <constraint firstAttribute="width" secondItem="P0p-Vc-hSv" secondAttribute="height" multiplier="7:12" id="etf-Do-oA3"/>
+                                    <constraint firstAttribute="width" constant="280" id="gLR-3P-QOn"/>
+                                    <constraint firstItem="y5j-mT-cr2" firstAttribute="trailing" secondItem="L9c-wy-ETf" secondAttribute="trailing" id="ps2-jO-9wT"/>
+                                    <constraint firstAttribute="height" constant="480" id="zCf-np-RXJ"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wm-O3-5sV">
+                                <rect key="frame" x="142" y="723" width="130" height="55"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Jhp-sI-xZK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="SkP-ce-d7N"/>
+                                    <constraint firstAttribute="width" secondItem="9wm-O3-5sV" secondAttribute="height" multiplier="26:11" id="liI-3N-0Eu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="Start !">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5r8-Hk-L8D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9wm-O3-5sV" firstAttribute="top" secondItem="P0p-Vc-hSv" secondAttribute="bottom" constant="40" id="3l6-Ku-cHI"/>
+                            <constraint firstItem="P0p-Vc-hSv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OCf-MV-bQC"/>
+                            <constraint firstItem="CL7-gH-ewa" firstAttribute="leading" secondItem="P0p-Vc-hSv" secondAttribute="leading" id="QrS-Wt-5kO"/>
+                            <constraint firstItem="CL7-gH-ewa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="Vuq-Ng-JOO"/>
+                            <constraint firstItem="9wm-O3-5sV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rpf-If-T2y"/>
+                            <constraint firstItem="P0p-Vc-hSv" firstAttribute="top" secondItem="CL7-gH-ewa" secondAttribute="bottom" constant="25" id="wpc-2q-XKy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="紙牌碰碰樂" id="rfJ-NX-D0R">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.counterclockwise" catalog="system" id="bxE-Z9-7AV">
+                            <connections>
+                                <action selector="Restart:" destination="BYZ-38-t0r" id="FxT-gg-k16"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="StartBtn" destination="9wm-O3-5sV" id="QXU-CX-ONr"/>
+                        <outlet property="scoreLabel" destination="ZGL-Dy-JDb" id="Xnf-v1-FDU"/>
+                        <outlet property="stepLabel" destination="Tku-8X-IPz" id="rGk-1B-d9Z"/>
+                        <outlet property="timeLabel" destination="9ws-GF-HaX" id="86m-lF-p3d"/>
+                        <outletCollection property="cardView" destination="G2s-0f-pVJ" collectionClass="NSMutableArray" id="Jc9-M1-1gg"/>
+                        <outletCollection property="cardView" destination="a0f-If-AmM" collectionClass="NSMutableArray" id="vBe-bi-q28"/>
+                        <outletCollection property="cardView" destination="ZMd-LF-h5s" collectionClass="NSMutableArray" id="rge-QT-Gw2"/>
+                        <outletCollection property="cardView" destination="DZX-pH-gdw" collectionClass="NSMutableArray" id="5LD-sZ-D5C"/>
+                        <outletCollection property="cardView" destination="fal-Hv-wvK" collectionClass="NSMutableArray" id="YWI-3Q-Axu"/>
+                        <outletCollection property="cardView" destination="cNF-5c-H9E" collectionClass="NSMutableArray" id="77I-xK-4mh"/>
+                        <outletCollection property="cardView" destination="gG6-1O-u6b" collectionClass="NSMutableArray" id="j3Q-KB-OHB"/>
+                        <outletCollection property="cardView" destination="L9c-wy-ETf" collectionClass="NSMutableArray" id="m5Q-an-Nyq"/>
+                        <outletCollection property="cardView" destination="8bY-QT-k1c" collectionClass="NSMutableArray" id="nSG-22-Iwb"/>
+                        <outletCollection property="cardView" destination="jbZ-HP-BlU" collectionClass="NSMutableArray" id="wQU-Im-7WI"/>
+                        <outletCollection property="cardLabel" destination="Icb-bn-tQs" collectionClass="NSMutableArray" id="5O6-I3-1DE"/>
+                        <outletCollection property="cardLabel" destination="3La-ze-4dy" collectionClass="NSMutableArray" id="22I-Ss-vZf"/>
+                        <outletCollection property="cardLabel" destination="nMN-FS-fXm" collectionClass="NSMutableArray" id="QoK-sn-36B"/>
+                        <outletCollection property="cardLabel" destination="CpJ-by-6go" collectionClass="NSMutableArray" id="IxN-oN-Pot"/>
+                        <outletCollection property="cardLabel" destination="r6C-km-r6L" collectionClass="NSMutableArray" id="1Dr-Br-6qv"/>
+                        <outletCollection property="cardLabel" destination="dQs-GE-aSy" collectionClass="NSMutableArray" id="yYO-2E-tdn"/>
+                        <outletCollection property="cardLabel" destination="chD-fd-elE" collectionClass="NSMutableArray" id="SvK-2I-DYp"/>
+                        <outletCollection property="cardLabel" destination="Kow-Na-FCO" collectionClass="NSMutableArray" id="qh0-XA-pNf"/>
+                        <outletCollection property="cardLabel" destination="u8N-HD-lNL" collectionClass="NSMutableArray" id="n1S-H2-xzo"/>
+                        <outletCollection property="cardLabel" destination="HQ9-zn-vVe" collectionClass="NSMutableArray" id="J4e-1m-5eQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="2xr-Jz-qyB" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="94"/>
+        </scene>
+        <!--Game Over-->
+        <scene sceneID="gE9-UD-Uqr">
+            <objects>
+                <viewController storyboardIdentifier="GameOver" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1lb-A9-iac" customClass="GameOver" customModule="CardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wKZ-0Q-wF3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="goz-kR-Ufj">
+                                <rect key="frame" x="113" y="194" width="188" height="364"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="p9b-Gy-00r">
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="114"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Grade :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvH-cj-VO3">
+                                                <rect key="frame" x="0.0" y="0.0" width="188" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCC-ag-xf0">
+                                                <rect key="frame" x="83" y="72" width="22.5" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sBw-cf-aPw">
+                                        <rect key="frame" x="54.5" y="169" width="79.5" height="92"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHN-O3-zNG">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd8-FB-cjR">
+                                                <rect key="frame" x="30" y="56" width="19.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXz-VF-aj7">
+                                        <rect key="frame" x="60.5" y="316" width="67" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="Back:" destination="1lb-A9-iac" eventType="touchUpInside" id="K4m-BM-d2g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vRX-Ot-lvM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="goz-kR-Ufj" firstAttribute="top" secondItem="vRX-Ot-lvM" secondAttribute="top" constant="150" id="7zn-yJ-Ak0"/>
+                            <constraint firstItem="goz-kR-Ufj" firstAttribute="centerX" secondItem="wKZ-0Q-wF3" secondAttribute="centerX" id="KI9-TY-Wzt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="grade" destination="CCC-ag-xf0" id="zEJ-bw-RHZ"/>
+                        <outlet property="overTime" destination="dd8-FB-cjR" id="BSl-uU-9WH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b4l-oF-a4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="933" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KgY-EJ-UWM">
+            <objects>
+                <navigationController id="MeG-1y-K8z" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hed-3s-T9V">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3fl-OI-b17"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hw5-Ft-cUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
